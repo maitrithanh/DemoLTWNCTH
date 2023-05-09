@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "ThongTin";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<style>
+    input[type=text], input[type=password], textarea {
+        width: 100%;
+    }
+    textarea {
+        height: 150px;
+    }
+    .col-12 {
+        padding: 8px 0;
+    }
+    .infor {
+        margin: 0 200px;
+    }
+</style>
+
+<h2 class="text-center">THÔNG TIN ĐĂNG KÝ</h2>
+<div class="row infor">
+    <div class="col-12">
+        <label>Tên</label>
+        <input type="text" name="name" value="" placeholder="Nhập tên"/>
+    </div>
+    <div class="col-12">
+        <label>Mật khẩu</label>
+        <input type="password" name="name" value="" placeholder="Nhập password" />
+    </div>
+    <div class="col-12">
+        <label>Địa chỉ</label>
+        <textarea></textarea>
+    </div>
+    <div class="p-0">
+        <input type="checkbox" name="name" value="Ghi nhớ" />
+        <label>Ghi nhớ</label>
+    </div>
+    <div class="p-0">
+        <button class="btn btn-primary pt-2">Gửi</button>
+    </div>
+</div>

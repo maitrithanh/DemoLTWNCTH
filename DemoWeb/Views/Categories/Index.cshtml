@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DemoWeb.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="">
+    <h2 style="text-align: center;">THÔNG TIN CATEGORIES</h2>
+    <p>
+        @Html.ActionLink("TẠO MỚI", "Create", null, new { @class = "btn btn-primary"})
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                MÃ CATEGORY
+            </th>
+            <th>
+                TÊN CATEGORY
+            </th>
+            <th>
+                LỆNH
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IDCate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NameCate)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.Id }, new { @class="btn btn-success"}) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.Id }, new { @class="btn btn-primary"}) |
+                    @Html.ActionLink("Xoá", "Delete", new { id = item.Id }, new { @class="btn btn-danger"})
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+

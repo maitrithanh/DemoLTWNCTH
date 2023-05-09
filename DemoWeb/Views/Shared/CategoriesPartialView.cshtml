@@ -1,0 +1,17 @@
+﻿@model IEnumerable<DemoWeb.Models.Category>
+
+
+<style>
+    ul li a {
+        text-decoration: none;
+    }
+</style>
+
+<div class="container">
+    <ul class="list-group">
+        @foreach (var item in Model)
+        {
+            @Html.ActionLink(item.NameCate, "GetProductsByCateId", "CustomerProducts", new { id = item.Id }, new { @class = "list-group-item list-group-item-action" })
+        }
+    </ul>
+</div>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body style="margin: 0;">
+    <table border="0" style="width: 100%; height: 100%; border-spacing: 0;">
+        <tr>
+            <td colspan="2" style="background-color: aquamarine;">
+                <p style="text-align: center;">
+                    Menu
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: teal;">
+                Left
+            </td>
+            <td style="background-color: antiquewhite; height: 550px;">
+                Right
+                <div>
+                    @RenderBody()
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: slategrey; ">
+                <p style="text-align: center;">
+                    Footer
+                </p>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
